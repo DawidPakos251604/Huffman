@@ -31,7 +31,7 @@ def send_file(filename, host='127.0.0.1', port=65432):
         s.sendall(pickle.dumps(data))
         print("Wysłano dane do serwera.")
 
-if name == "main":
+if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Użycie: python send.py <IP_serwera> [port]")
         sys.exit(1)

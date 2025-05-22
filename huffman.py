@@ -2,13 +2,13 @@ import heapq
 from collections import defaultdict, Counter
 
 class Node:
-    def init(self, char=None, freq=0):
+    def __init__(self, char=None, freq=0):
         self.char = char
         self.freq = freq
         self.left = None
         self.right = None
 
-    def lt(self, other):
+    def __lt__(self, other):
         return self.freq < other.freq
 
 def build_huffman_tree(text):
